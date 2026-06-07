@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#000000" />
+<title>Book a Free Meeting · Krengel Marketing</title>
+<meta name="description" content="Tell us about your business and book a free strategy meeting with Krengel Marketing. We'll talk through what you need and send a custom plan and quote, no obligation." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=DM+Sans:opsz,wght@9..40,300..700&family=JetBrains+Mono:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2" />
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="contact">
+
+<div class="grain" aria-hidden="true"></div>
+<div id="site-ticker"></div>
+<div id="site-nav"></div>
+
+<main>
+
+<!-- ===== CTA / CONTACT ===== -->
+<section class="cta" id="contact">
+  <div class="cta-grid">
+    <div class="cta-left">
+      <span class="mono cta-tag">Get started</span>
+      <h2 class="cta-h">
+        Free meeting.<br/>
+        <em>Custom</em> plan.<br/>
+        No pressure.
+      </h2>
+      <p class="cta-sub">
+        Tell us about your business and we'll reach out to set up a quick,
+        no pressure meeting. We'll talk through what you need, then put together a
+        custom plan and a clear quote. Like what you hear? We get to work. If not,
+        no hard feelings.
+      </p>
+
+      <ul class="cta-list">
+        <li><span class="cta-check">✓</span> Free, no cost, no obligation</li>
+        <li><span class="cta-check">✓</span> A real person reads every message</li>
+        <li><span class="cta-check">✓</span> Honest advice, no inflated claims</li>
+      </ul>
+
+      <div class="cta-direct">
+        <span class="mono cta-direct-label">Or reach us directly</span>
+        <a class="cta-direct-phone" href="tel:+12146837946">(214) 683 7946</a>
+        <a class="cta-direct-email" href="mailto:krengelmarkets@gmail.com">krengelmarkets@gmail.com</a>
+      </div>
+    </div>
+
+    <form id="meetingForm" name="meeting-request" class="cta-form" method="POST" action="https://formsubmit.co/krengelmarkets@gmail.com" onsubmit="handleMeetingSubmit(event)">
+      <!-- FormSubmit (AJAX). Mirrors the king-painting setup. -->
+      <input type="hidden" name="_subject" value="New meeting request · Krengel Marketing">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="form-row">
+        <label>
+          <span>Your name</span>
+          <input type="text" name="name" required placeholder="Jane Smith" autocomplete="name" />
+        </label>
+        <label>
+          <span>Business name</span>
+          <input type="text" name="business" required placeholder="Smith &amp; Co." autocomplete="organization" />
+        </label>
+      </div>
+      <label class="full">
+        <span>Email</span>
+        <input type="email" name="email" required placeholder="jane@smithco.com" autocomplete="email" />
+      </label>
+      <label class="full">
+        <span>What's the one thing you want to improve?</span>
+        <textarea name="message" rows="3" placeholder="More calls. More booked jobs. More reviews. A website that actually converts. Be specific. We'll build the plan around it."></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary btn-block">
+        <span class="btn-label">Book my free meeting</span>
+        <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form-foot">No spam. One honest reply from a real person.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="chrome.js?v=2"></script>
+<script src="script.js?v=2"></script>
+<script>
+  /* FormSubmit AJAX handler — mirrors king-painting-llc.
+     Fires the request in the background, then navigates to /thanks.html
+     regardless of result so the user always sees the on-brand thanks page. */
+  function handleMeetingSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('meetingForm');
+    // Honeypot — silently drop bots that fill the hidden field
+    if (form.querySelector('[name="_honey"]').value) return;
+    const data = Object.fromEntries(new FormData(form).entries());
+    const goToThanks = () => { window.location.href = '/thanks.html'; };
+    fetch('https://formsubmit.co/ajax/krengelmarkets@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(goToThanks).catch(goToThanks);
+  }
+</script>
+</body>
+</html>

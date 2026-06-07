@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#000000" />
+<title>Thanks, we'll be in touch · Krengel Marketing</title>
+<meta name="description" content="Your message reached us. We'll reach out within one business day to set up your free meeting." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..900,0..100;1,9..144,200..900,0..100&family=DM+Sans:opsz,wght@9..40,300..700&family=JetBrains+Mono:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2" />
+<style>
+  /* Thanks page, sits inside the dark .cta section styling */
+  .thanks {
+    background: var(--ink);
+    color: var(--bg);
+    min-height: 78vh;
+    padding: 120px var(--pad) 100px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .thanks::before {
+    content: 'KRENGEL MARKETING';
+    position: absolute; bottom: -60px; right: -40px;
+    font-family: var(--f-display); font-weight: 350; font-style: italic;
+    font-size: clamp(120px, 22vw, 320px);
+    line-height: 1; letter-spacing: -0.04em;
+    color: rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .thanks-inner { max-width: 720px; position: relative; z-index: 1; }
+  .thanks-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bg);
+    margin-bottom: 28px;
+  }
+  .thanks-check {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--bg); color: var(--ink);
+    font-size: 11px; font-weight: 700;
+  }
+  .thanks-h {
+    font-family: var(--f-display);
+    font-weight: 350;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    margin-bottom: 28px;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
+  }
+  .thanks-h em {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+  .thanks-sub {
+    font-size: 19px; line-height: 1.55;
+    color: var(--dark-soft);
+    max-width: 540px;
+    margin: 0 auto 40px;
+  }
+  .thanks-actions {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .thanks .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 16px 22px;
+    border-radius: 999px;
+    font-weight: 500; font-size: 14px;
+    transition: transform .2s ease, background .2s ease, color .2s ease;
+    cursor: pointer;
+  }
+  .thanks .btn-back {
+    background: var(--bg); color: var(--ink);
+  }
+  .thanks .btn-back:hover { transform: translateY(-2px); }
+  .thanks .btn-ghost {
+    background: transparent; color: var(--bg);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+  }
+  .thanks .btn-ghost:hover { box-shadow: inset 0 0 0 1px var(--bg); }
+  .thanks-meta {
+    margin-top: 56px;
+    font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dark-soft);
+  }
+</style>
+</head>
+<body data-page="thanks">
+
+<div class="grain" aria-hidden="true"></div>
+<div id="site-ticker"></div>
+<div id="site-nav"></div>
+
+<main>
+
+<section class="thanks">
+  <div class="thanks-inner">
+    <span class="thanks-tag"><span class="thanks-check">✓</span> Message received</span>
+    <h1 class="thanks-h">
+      Thanks.<br/>
+      <em>We'll be in touch.</em>
+    </h1>
+    <p class="thanks-sub">
+      We'll reach out within <strong style="color: var(--bg);">one business day</strong>
+      to set up your free strategy meeting. In the meantime, feel free to
+      poke around, or email us directly at <a href="mailto:krengelmarkets@gmail.com" style="color: var(--bg); text-decoration: underline; text-underline-offset: 4px;">krengelmarkets@gmail.com</a>.
+    </p>
+    <div class="thanks-actions">
+      <a class="btn btn-back" href="index.html">← Back to home</a>
+      <a class="btn btn-ghost" href="results.html">See our results</a>
+    </div>
+    <p class="thanks-meta">EST. 2026 · DALLAS, TX</p>
+  </div>
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="chrome.js?v=2"></script>
+<script src="script.js?v=2"></script>
+</body>
+</html>
