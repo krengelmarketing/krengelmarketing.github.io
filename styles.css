@@ -1270,7 +1270,7 @@ html:not(.js) .draw-line { stroke-dashoffset: 0 !important; }
   body { font-size: 16px; }
   /* keep brand + CTA together on the top row, links strip below */
   .brand { font-size: 18px; gap: 7px; }
-  .brand-mark svg { width: 22px; height: 22px; }
+  .brand-mark svg, .brand-mark img { width: auto; height: 22px; }
   .nav-cta { padding: 10px 14px; font-size: 12px; }
   .nav-links { gap: 20px; }
   .hero { padding-top: 36px; }
