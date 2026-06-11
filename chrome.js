@@ -41,12 +41,9 @@
   </div>
 </div>`;
 
-  /* The Mark — bold, filled K. Drawn as a single closed path so it stays
-     pixel-sharp in nav, footer, favicon, and social previews. */
-  const LOGO = `
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-        <path d="M5 4 L13 4 L13 13 L22 4 L28 4 L18 16 L28 28 L22 28 L13 19 L13 28 L5 28 Z"/>
-      </svg>`;
+  /* The Mark — the literal hand-drawn K, extracted from the source artwork
+     and shipped as a transparent PNG. Same file used in nav, footer, favicon. */
+  const LOGO = `<img src="logo-k.png?v=1" alt="" width="20" height="28" aria-hidden="true" style="display:block" />`;
 
   const NAV = `
 <header class="nav" id="nav">
@@ -75,9 +72,7 @@
     <div class="foot-brand">
       <div class="brand brand-foot">
         <span class="brand-mark" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
-            <path d="M5 4 L13 4 L13 13 L22 4 L28 4 L18 16 L28 28 L22 28 L13 19 L13 28 L5 28 Z"/>
-          </svg>
+          <img src="logo-k.png?v=1" alt="" width="23" height="32" style="display:block" />
         </span>
         <span class="brand-text">Krengel Marketing</span>
       </div>
