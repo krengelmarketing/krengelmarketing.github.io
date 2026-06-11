@@ -41,21 +41,11 @@
   </div>
 </div>`;
 
-  /* The Seal — serif K inside a circle.
-     Both the K and circle are pure SVG paths so the mark renders identically
-     in browsers, social previews, favicons, and PNG exports. */
+  /* The Mark — bold, filled K. Drawn as a single closed path so it stays
+     pixel-sharp in nav, footer, favicon, and social previews. */
   const LOGO = `
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor">
-        <circle cx="16" cy="16" r="14" stroke-width="1.4"/>
-        <g stroke-linecap="round" stroke-linejoin="round">
-          <line x1="11.5" y1="9"  x2="11.5" y2="23"  stroke-width="2.2"/>
-          <line x1="9.3"  y1="9"  x2="13.7" y2="9"   stroke-width="1.2"/>
-          <line x1="9.3"  y1="23" x2="13.7" y2="23"  stroke-width="1.2"/>
-          <line x1="11.5" y1="16" x2="20"   y2="9"   stroke-width="2.2"/>
-          <line x1="18.2" y1="9"  x2="22"   y2="9"   stroke-width="1.2"/>
-          <line x1="11.5" y1="16" x2="21.5" y2="23"  stroke-width="2.2"/>
-          <line x1="19.5" y1="23" x2="23.2" y2="23"  stroke-width="1.2"/>
-        </g>
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path d="M5 4 L13 4 L13 13 L22 4 L28 4 L18 16 L28 28 L22 28 L13 19 L13 28 L5 28 Z"/>
       </svg>`;
 
   const NAV = `
@@ -85,17 +75,8 @@
     <div class="foot-brand">
       <div class="brand brand-foot">
         <span class="brand-mark" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor">
-            <circle cx="16" cy="16" r="14" stroke-width="1.4"/>
-            <g stroke-linecap="round" stroke-linejoin="round">
-              <line x1="11.5" y1="9"  x2="11.5" y2="23"  stroke-width="2.2"/>
-              <line x1="9.3"  y1="9"  x2="13.7" y2="9"   stroke-width="1.2"/>
-              <line x1="9.3"  y1="23" x2="13.7" y2="23"  stroke-width="1.2"/>
-              <line x1="11.5" y1="16" x2="20"   y2="9"   stroke-width="2.2"/>
-              <line x1="18.2" y1="9"  x2="22"   y2="9"   stroke-width="1.2"/>
-              <line x1="11.5" y1="16" x2="21.5" y2="23"  stroke-width="2.2"/>
-              <line x1="19.5" y1="23" x2="23.2" y2="23"  stroke-width="1.2"/>
-            </g>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+            <path d="M5 4 L13 4 L13 13 L22 4 L28 4 L18 16 L28 28 L22 28 L13 19 L13 28 L5 28 Z"/>
           </svg>
         </span>
         <span class="brand-text">Krengel Marketing</span>
